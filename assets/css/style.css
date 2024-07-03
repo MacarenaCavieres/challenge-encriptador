@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+    --color-primario: #071952;
+    --color-secundario: #d8dfe8;
+    --color-terciario: #e5e5e5;
+    --color-cuarternario: #ffffff;
+
+    --fuente-space: "Space Mono", monospace;
+    --fuente-merri: "Merriweather", serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +18,8 @@
 
 body {
     height: 100vh;
-    font-family: "Space Mono", monospace;
+    font-family: var(--fuente-space);
+    background-color: var(--color-terciario);
 }
 
 header {
@@ -34,12 +46,13 @@ main {
     width: 100%;
     border: none;
     resize: none;
-    color: #00008b;
+    color: var(--color-primario);
     font-size: 1.3rem;
+    background-color: var(--color-terciario);
 }
 
 .main__izq__msg::placeholder {
-    color: #00008b;
+    color: var(--color-primario);
     font-size: 1.3rem;
 }
 
@@ -48,7 +61,23 @@ main {
 }
 
 .main__izq__btn {
-    font-family: "Space Mono", monospace;
+    font-family: var(--fuente-space);
+    width: 49%;
+    padding: 0.8rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.btn__encriptar {
+    border: none;
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+}
+
+.btn__desencriptar {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    border: 1px solid var(--color-primario);
 }
 
 .main__der {
@@ -58,8 +87,10 @@ main {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    box-shadow: 5px 5px 16px rgba(146, 144, 144, 0.473);
-    border-radius: 10px;
+    box-shadow: 1px 1px 10px #00000062;
+    border-radius: 15px;
+    text-align: center;
+    background-color: var(--color-cuarternario);
 }
 
 .main__der__img {
@@ -67,10 +98,12 @@ main {
 }
 
 footer {
+    background: var(--color-cuarternario);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "Merriweather", serif;
+    font-family: var(--fuente-merri);
     height: 10%;
-    margin-top: 3%;
+    margin-top: 8%;
+    font-size: 1rem;
 }
