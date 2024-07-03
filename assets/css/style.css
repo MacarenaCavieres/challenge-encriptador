@@ -1,10 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-:root {
+/* :root {
     --color-primario: #071952;
     --color-secundario: #d8dfe8;
     --color-terciario: #e5e5e5;
     --color-cuarternario: #ffffff;
+
+    --fuente-space: "Space Mono", monospace;
+    --fuente-merri: "Merriweather", serif;
+} */
+/* :root {
+    --color-primario: #164863;
+    --color-secundario: #427d9d;
+    --color-terciario: #9bbec8;
+    --color-cuarternario: #ddf2fd;
+
+    --fuente-space: "Space Mono", monospace;
+    --fuente-merri: "Merriweather", serif;
+} */
+:root {
+    --color-primario: #102c57;
+    --color-secundario: #dac0a3;
+    --color-terciario: #eadbc8;
+    --color-cuarternario: #fefaf6;
 
     --fuente-space: "Space Mono", monospace;
     --fuente-merri: "Merriweather", serif;
@@ -29,7 +47,7 @@ header {
 main {
     display: flex;
     justify-content: center;
-    height: 90vh;
+    min-height: 90vh;
     padding: 0% 5% 0% 10%;
     gap: 30px;
 }
@@ -60,8 +78,13 @@ main {
     margin-block: 20px;
 }
 
+.main__izq__span {
+    font-size: 0.8rem;
+}
+
 .main__izq__btn {
     font-family: var(--fuente-space);
+    font-size: 1rem;
     width: 49%;
     padding: 0.8rem;
     border-radius: 15px;
@@ -106,4 +129,49 @@ footer {
     height: 10%;
     margin-top: 8%;
     font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+    header {
+        padding-block: 5%;
+    }
+    main {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .main__izq {
+        width: 100%;
+    }
+
+    .main__izq__msg {
+        height: 400px;
+    }
+
+    .main__der {
+        margin-top: 3rem;
+    }
+
+    .main__der__img {
+        display: none;
+    }
+
+    footer {
+        margin-top: 5%;
+    }
+}
+@media (max-width: 576px) {
+    header {
+        padding-block: 10%;
+    }
+    .main__izq__btnes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .main__izq__btn {
+        width: 100%;
+    }
 }
