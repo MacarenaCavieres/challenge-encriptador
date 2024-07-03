@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Space Mono", monospace;
+}
+
+header {
+    padding: 2% 0% 3% 5%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    padding: 0% 5% 0% 10%;
+    gap: 30px;
+}
+
+.main__izq {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main__izq__msg {
+    height: 70%;
+    width: 100%;
+    border: none;
+    resize: none;
+    color: #00008b;
+    font-size: 1.3rem;
+}
+
+.main__izq__msg::placeholder {
+    color: #00008b;
+    font-size: 1.3rem;
+}
+
+.main__izq__group {
+    margin-block: 20px;
+}
+
+.main__izq__btn {
+    font-family: "Space Mono", monospace;
+}
+
+.main__der {
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 5px 5px 16px rgba(146, 144, 144, 0.473);
+    border-radius: 10px;
+}
+
+.main__der__img {
+    width: 50%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Merriweather", serif;
+    height: 10%;
+    margin-top: 3%;
+}
