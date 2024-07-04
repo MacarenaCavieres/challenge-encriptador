@@ -82,7 +82,8 @@ main {
     font-size: 0.8rem;
 }
 
-.main__izq__btn {
+.main__izq__btn,
+.main__der__copiar {
     font-family: var(--fuente-space);
     font-size: 1rem;
     width: 49%;
@@ -97,7 +98,8 @@ main {
     color: var(--color-secundario);
 }
 
-.btn__desencriptar {
+.btn__desencriptar,
+.main__der__copiar {
     background-color: var(--color-secundario);
     color: var(--color-primario);
     border: 1px solid var(--color-primario);
@@ -118,9 +120,27 @@ main {
 
 .main__der__img {
     width: 50%;
+    /* display: none; */
+}
+
+.main__der__h5,
+.main__der__p {
+    /* display: none; */
 }
 
 .main__der__encript {
+    height: 89%;
+    width: 100%;
+    border: none;
+    resize: none;
+    color: var(--color-primario);
+    font-size: 1.3rem;
+    background-color: var(--color-cuarternario);
+    display: none;
+}
+
+.main__der__copiar {
+    width: 100%;
     display: none;
 }
 
@@ -154,10 +174,15 @@ footer {
 
     .main__der {
         margin-top: 3rem;
+        min-height: 50vh;
     }
 
     .main__der__img {
         display: none;
+    }
+
+    .main__der__encript {
+        min-height: 20rem;
     }
 
     footer {
