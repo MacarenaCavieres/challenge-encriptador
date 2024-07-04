@@ -120,6 +120,10 @@ main {
     width: 50%;
 }
 
+.main__der__encript {
+    display: none;
+}
+
 footer {
     background: var(--color-cuarternario);
     display: flex;

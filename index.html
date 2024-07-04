@@ -21,7 +21,7 @@
             <section class="main__izq">
                 <textarea
                     name="msg"
-                    id="msgUser"
+                    id="msgUsuario"
                     class="main__izq__msg"
                     placeholder="Ingrese el texto aquí"
                 ></textarea>
@@ -31,13 +31,17 @@
                     <span class="main__izq__span">Solo letras minúsculas y sin acentos</span>
                 </div>
                 <div class="main__izq__btnes">
-                    <button class="main__izq__btn btn__encriptar">Encriptar</button>
-                    <button class="main__izq__btn btn__desencriptar">Desencriptar</button>
+                    <button class="main__izq__btn btn__encriptar" id="btnEncriptar" type="button">
+                        Encriptar
+                    </button>
+                    <button class="main__izq__btn btn__desencriptar" id="btnDesencriptar" type="button">
+                        Desencriptar
+                    </button>
                 </div>
             </section>
 
             <section class="main__der">
-                <p></p>
+                <textarea class="main__der__encript" id="msgEncript"></textarea>
                 <img
                     src="./assets/img/Muñeco.png"
                     class="main__der__img"
@@ -51,5 +55,7 @@
         <footer>
             <p>Desarrollado por <strong>MCavieres</strong><i class="fa-solid fa-feather"></i></p>
         </footer>
+
+        <script src="./assets/js/app.js"></script>
     </body>
 </html>
