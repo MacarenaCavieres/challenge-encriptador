@@ -5,8 +5,9 @@ const btnCopiar = document.querySelector(".main__der__copiar");
 const derImg = document.querySelector(".main__der__img");
 const derH5 = document.querySelector(".main__der__h5");
 const derP = document.querySelector(".main__der__p");
-const alert = document.querySelector(".main__izq__alert");
+const alerta = document.querySelector(".main__izq__alert");
 const textArea = document.querySelector("#msgUsuario");
+const textoCopiado = document.querySelector(".main__der__copiado");
 
 const claves = {
     a: "ai",
@@ -16,17 +17,8 @@ const claves = {
     u: "ufat",
 };
 
-const valores = [
-    {
-        ai: "a",
-        enter: "e",
-        imes: "i",
-        ober: "o",
-        ufat: "u",
-    },
-];
-
 btnEncriptar.addEventListener("click", () => {
+    textoCopiado.style.display = "none";
     const msgUsuario = textArea.value.trim();
     let encriptado = "";
     idem(msgUsuario);
@@ -38,15 +30,20 @@ btnEncriptar.addEventListener("click", () => {
             encriptado += msgUsuario[j];
         }
     }
-    msgEncript.textContent = encriptado;
+    msgEncript.value = encriptado;
     textArea.value = "";
 });
 
 btnCopiar.addEventListener("click", () => {
-    console.log("copy");
+    const aCopiar = msgEncript.value;
+    copiarMsg(aCopiar);
+    textoCopiado.style.display = "block";
+    msgEncript.value = "";
 });
 
 btnDesencriptar.addEventListener("click", () => {
+    textoCopiado.style.display = "none";
+
     let msgUsuario = textArea.value.trim();
 
     idem(msgUsuario);
@@ -55,17 +52,17 @@ btnDesencriptar.addEventListener("click", () => {
         msgUsuario = msgUsuario.split(value).join(key);
     });
 
-    msgEncript.textContent = msgUsuario;
+    msgEncript.value = msgUsuario;
     textArea.value = "";
 });
 
 function idem(msgUsuario) {
     const regex = /^[a-z\s]+$/;
     if (!msgUsuario || !regex.test(msgUsuario)) {
-        alert.style.display = "block";
+        alerta.style.display = "block";
         return;
     } else {
-        alert.style.display = "none";
+        alerta.style.display = "none";
     }
 
     msgEncript.style.display = "block";
@@ -74,3 +71,12 @@ function idem(msgUsuario) {
     derH5.style.display = "none";
     derP.style.display = "none";
 }
+
+const copiarMsg = async (aCopiar) => {
+    try {
+        await navigator.clipboard.writeText(aCopiar);
+    } catch (error) {
+        console.log(error);
+        alert("Algo salió mal");
+    }
+};
