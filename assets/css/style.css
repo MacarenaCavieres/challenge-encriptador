@@ -53,7 +53,7 @@ main {
 }
 
 .main__izq {
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,6 +82,11 @@ main {
     font-size: 0.8rem;
 }
 
+.main__izq__alert {
+    display: none;
+    color: #973131;
+}
+
 .main__izq__btn,
 .main__der__copiar {
     font-family: var(--fuente-space);
@@ -107,6 +112,7 @@ main {
 
 .main__der {
     padding: 3%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,10 +129,10 @@ main {
     /* display: none; */
 }
 
-.main__der__h5,
+/* .main__der__h5,
 .main__der__p {
-    /* display: none; */
-}
+    display: none; 
+ }  */
 
 .main__der__encript {
     height: 89%;
@@ -175,6 +181,7 @@ footer {
     .main__der {
         margin-top: 3rem;
         min-height: 50vh;
+        width: 100%;
     }
 
     .main__der__img {
