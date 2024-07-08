@@ -7,6 +7,14 @@ Se trabaja con eventos, funciones, estilos, variables en css y también manipula
 
 Para ver el proyecto da click [aquí](https://macarenacavieres.github.io/challenge-encriptador/)
 
+## Imágenes proyecto
+
+Modo claro
+![modo-claro](./img-readme/modo-claro.png)
+
+Modo oscuro
+![modo-oscuro](./img-readme/modo-oscuro.png)
+
 ## Tecnologías
 - HTML
 - CSS
