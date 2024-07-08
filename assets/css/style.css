@@ -38,7 +38,7 @@
     --color-msg: var(--color-primario-dark);
     --color-font-msg: var(--color-secundario-dark);
     --color-main-der: var(--color-terciario-dark);
-    --color-font-der: var(--color-cuaternario-dark);
+    --color-font-der: var(--color-secundario-dark);
     --btn-primario: var(--color-secundario-dark);
     --btn-secundario: var(--color-cuaternario-dark);
     --color-encrip-der: var(--color-terciario-dark);
