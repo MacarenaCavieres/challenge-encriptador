@@ -1,23 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-/* :root {
-    --color-primario: #071952;
-    --color-secundario: #d8dfe8;
-    --color-terciario: #e5e5e5;
-    --color-cuarternario: #ffffff;
-
-    --fuente-space: "Space Mono", monospace;
-    --fuente-merri: "Merriweather", serif;
-} */
-/* :root {
-    --color-primario: #164863;
-    --color-secundario: #427d9d;
-    --color-terciario: #9bbec8;
-    --color-cuarternario: #ddf2fd;
-
-    --fuente-space: "Space Mono", monospace;
-    --fuente-merri: "Merriweather", serif;
-} */
 :root {
     --color-primario: #102c57;
     --color-secundario: #dac0a3;
@@ -44,6 +26,15 @@ header {
     padding: 2% 0% 3% 5%;
 }
 
+h1 {
+    text-align: center;
+    margin-bottom: 5%;
+    color: var(--color-primario);
+    text-decoration: underline;
+    font-family: var(--fuente-merri);
+    font-size: 2.5rem;
+}
+
 main {
     display: flex;
     justify-content: center;
@@ -67,6 +58,7 @@ main {
     color: var(--color-primario);
     font-size: 1.3rem;
     background-color: var(--color-terciario);
+    padding: 10px;
 }
 
 .main__izq__msg::placeholder {
@@ -167,6 +159,11 @@ footer {
     main {
         flex-direction: column;
         padding: 5%;
+    }
+
+    h1 {
+        font-size: 2rem;
+        padding: 10px;
     }
 
     .main__izq {
