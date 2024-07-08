@@ -6,6 +6,8 @@
     --color-terciario: #eadbc8;
     --color-cuarternario: #fefaf6;
 
+    --color-primario-dark: #222831;
+
     --fuente-space: "Space Mono", monospace;
     --fuente-merri: "Merriweather", serif;
 }
@@ -19,11 +21,87 @@
 body {
     height: 100vh;
     font-family: var(--fuente-space);
-    background-color: var(--color-terciario);
+    background-color: var(--bg);
+}
+
+.light-theme {
+    --bg: var(--color-terciario);
+}
+
+.dark-theme {
+    --bg: var(var(--color-primario-dark));
 }
 
 header {
     padding: 2% 0% 3% 5%;
+    display: flex;
+}
+
+/* toggle theme */
+/* https://uiverse.io/catraco/brown-termite-67 */
+
+.switch-name {
+    --dark-sky: #5050e5;
+    --light-sky: #35d5e5;
+    display: inline-block;
+    position: relative;
+    border-radius: 5em;
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    overflow: hidden;
+    transition: all 0.5s;
+    margin-left: auto;
+    margin-right: 5%;
+}
+
+.switch-name .back {
+    background-color: var(--dark-sky);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.switch-name .checkbox {
+    opacity: 0;
+}
+
+.switch-name .checkbox:checked ~ .back {
+    background-color: var(--light-sky);
+}
+
+.switch-name .checkbox:checked ~ .moon {
+    transform: translate(100%) rotate(360deg);
+    opacity: 0;
+}
+
+.switch-name .checkbox:checked ~ .sun {
+    transform: translate(100%) rotate(360deg);
+    opacity: 1;
+}
+
+.switch-name .moon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 0.4em;
+    fill: var(--moon);
+    transition: 0.5s;
+}
+
+.switch-name .sun {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 0.4em;
+    fill: var(--sun);
+    transition: 0.5s;
+    opacity: 0;
 }
 
 h1 {
