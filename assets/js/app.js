@@ -8,6 +8,8 @@ const derP = document.querySelector(".main__der__p");
 const alerta = document.querySelector(".main__izq__alert");
 const textArea = document.querySelector("#msgUsuario");
 const textoCopiado = document.querySelector(".main__der__copiado");
+const themeBody = document.querySelector("#themeBody");
+const checkbox = document.querySelector(".checkbox");
 
 const claves = {
     a: "ai",
@@ -80,3 +82,9 @@ const copiarMsg = async (aCopiar) => {
         alert("Algo salió mal");
     }
 };
+
+checkbox.addEventListener("change", () => {
+    themeBody.className.indexOf("dark__theme") === -1
+        ? themeBody.classList.add("dark__theme")
+        : themeBody.classList.remove("dark__theme");
+});
